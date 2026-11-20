@@ -198,3 +198,32 @@ html.lenis body {
     z-index: 1;
   }
 }
+
+.font-pixel {
+  font-family: var(--font-pixel), 'Silkscreen', monospace;
+  letter-spacing: 0.05em;
+}
+
+.arcade-title {
+  position: relative;
+  color: #00ff41;
+  text-shadow:
+    0 0 4px #00ff41,
+    0 0 12px #00ff41,
+    0 0 24px rgba(0, 255, 65, 0.6);
+}
+
+.arcade-title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.35) 3px,
+    rgba(0, 0, 0, 0.35) 4px
+  );
+  mix-blend-mode: multiply;
+}
